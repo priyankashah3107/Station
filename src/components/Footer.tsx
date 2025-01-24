@@ -20,7 +20,7 @@ const footer = [
 
 const Footer = () => {
   return (
-    <footer className="bg-[#707481] flex flex-col sm:flex-row justify-between p-6 sm:p-14 items-center text-black">
+    <footer className="bg-[#707481] flex flex-col sm:flex-row justify-between p-6 sm:p-14 items-center text-black mt-2 sm:mt-10">
       <div className="flex flex-col gap-2">
         <div className="flex items-center space-x-2 ">
           <svg
