@@ -1,4 +1,5 @@
 import Button from "@/components/Button";
+import Footer from "@/components/Footer";
 import HomePage from "@/components/HomePage";
 import Navbar from "@/components/Navbar";
 import Podcast from "@/components/Podcast";
@@ -20,6 +21,7 @@ export default function Home() {
       <HomePage />
       <Podcast />
       <Trending />
+      <Footer />
     </>
   );
 }

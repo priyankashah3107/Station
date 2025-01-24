@@ -189,7 +189,7 @@ const Trending = () => {
   return (
     <>
       <section className=" bg-white flex flex-col items-center justify-center min-h-screen">
-        <h1 className="text-text-primary text-[22px] md:text-[28px] font-bold tracking-tight text-center mt-6 mb-4">
+        <h1 className="text-text-primary text-[22px] md:text-[28px] font-bold tracking-tight text-center mt-6 mb-4 ">
           Trending on Station 🔥
         </h1>
         {trendingData.map((val, index) => (

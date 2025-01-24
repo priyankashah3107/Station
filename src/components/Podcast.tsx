@@ -141,7 +141,7 @@ const Podcast = () => {
                 <h2 className="w-full text-nowrap overflow-hidden truncate font-extrabold lg:text-lg text-[#707481] mt-3">
                   {val.title}
                 </h2>
-                <p className="text-sm text-text-secondary line-clamp-2">
+                <p className="text-sm text-[#707481]  line-clamp-2">
                   {val.para}
                 </p>
 
