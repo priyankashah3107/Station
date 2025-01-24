@@ -2,6 +2,7 @@ import Button from "@/components/Button";
 import HomePage from "@/components/HomePage";
 import Navbar from "@/components/Navbar";
 import Podcast from "@/components/Podcast";
+import Trending from "@/components/Trending ";
 import React from "react";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <Navbar />
       <HomePage />
       <Podcast />
+      <Trending />
     </>
   );
 }

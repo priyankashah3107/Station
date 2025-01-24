@@ -71,7 +71,7 @@ const HomePage = () => {
                   height={40}
                 />
               </div> */}
-              <div className="flex flex-row">
+              <div className="flex flex-row ">
                 {images.map((val, index) => (
                   <div className="flex flex-row" key={index}>
                     <Image src={val.image} alt="user1" width={40} height={40} />
@@ -100,8 +100,11 @@ const HomePage = () => {
             </div> */}
 
             {homelogo.map((val, index) => (
-              <div className="gap-11 hidden lg:flex items-center justify-center">
-                <div className="flex flex-col items-center gap-2 w-full">
+              <div
+                className="gap-11 hidden lg:flex items-center justify-center"
+                key={index}
+              >
+                <div className="flex flex-col items-center gap-2 w-full ">
                   <Image
                     src={val.image}
                     alt="message"
