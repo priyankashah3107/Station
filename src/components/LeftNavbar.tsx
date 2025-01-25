@@ -63,10 +63,10 @@ const LeftNavbar = () => {
 
       {/* Sidebar */}
       <nav
-        className={`fixed top-0 left-0 h-screen z-40 bg-[#f1f1f1] border-r border-gray-200 transform transition-transform overflow-x-auto ${
+        className={`fixed top-0 left-0 h-screen z-40 bg-[#f1f1f1] border-r border-gray-200 transform transition-transform  ${
           isMobileOpen ? "translate-x-0" : "-translate-x-full"
         } lg:translate-x-0 lg:w-[64px] ${
-          isExpanded ? "lg:w-[200px]" : "lg:w-[64px]"
+          isExpanded ? "lg:w-[220px]" : "lg:w-[64px]"
         }`}
       >
         <div className="flex flex-col h-full justify-between">
