@@ -1,13 +1,41 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { Divide, Menu, X } from "lucide-react";
 
 const icons = [
   { id: 1, image: "/icons/home.svg", label: "Home" },
   { id: 2, image: "/icons/fire.svg", label: "Deals" },
   { id: 3, image: "/icons/stroe.svg", label: "Merch" },
   { id: 4, image: "/icons/bell.svg", label: "Notifications" },
+];
+
+const community = [
+  {
+    id: 1,
+    name: "Fan Feed",
+  },
+  {
+    id: 2,
+    name: "Football Talk",
+  },
+  {
+    id: 3,
+    name: "Flim Club Suggestion",
+  },
+  {
+    id: 4,
+    name: "Guest Suggestion",
+  },
+  {
+    id: 5,
+    name: "No Dumb Question",
+  },
+
+  // {
+  //   id: 6,
+  //   name: "Fan Art",
+  // },
 ];
 
 const LeftNavbar = () => {
@@ -107,6 +135,40 @@ const LeftNavbar = () => {
               ))}
             </div>
           </div>
+
+          {isExpanded ? (
+            <div className="flex flex-col gap-4 py-2 px-4">
+              <h2 className="text-xs font-semibold uppercase text-[#707481]">
+                COMMUNITY
+              </h2>
+              {community.map((val) => (
+                <ul
+                  key={val.id}
+                  className="text-[#0E1323] truncate transition-opacity duration-300 w-full text-wrap cursor-pointer hover:bg-[#f1f1f1]"
+                >
+                  <div className="flex flex-row gap-2 hover:bg-[#d1d1d1] p-0.5 rounded-md">
+                    <svg
+                      className="shrink-0 size-5"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        d="M9.49999 3L6.49999 21M17.5 3L14.5 21M20.5 8H3.5M19.5 16H2.5"
+                        stroke="black"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      ></path>
+                    </svg>
+                    <li className="font-medium">{val.name}</li>
+                  </div>
+                </ul>
+              ))}
+            </div>
+          ) : (
+            ""
+          )}
 
           {/* Bottom Section */}
           <div className="p-3">
