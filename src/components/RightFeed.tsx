@@ -344,7 +344,7 @@ function RequestCollection() {
 function LeftFeed() {
   return (
     <>
-      <section>
+      <section className="max-w-[400px] border">
         <div className="bg-black flex flex-col mt-3 min-w-full lg:min-w-[380px] overflow-hidden rounded-[20px] text-white sm:ml-6">
           <div className="flex flex-col gap-5 bg-[#000000] p-3 relative w-full transition-all duration-300">
             <div className="flex flex-row cursor-pointer">
@@ -440,9 +440,9 @@ function LeftFeedExplore() {
 
   return (
     <>
-      <section>
+      <section className="overflow-x-scroll scrollbar-hide mb-10 mt-10 sm:mt-0 sm:mb-0">
         {/* Buttons */}
-        <ul className="flex flex-wrap gap-1 sm:mt-6 sm:ml-8">
+        <ul className="flex flex-wrap gap-1 sm:mt-6 sm:ml-8 max-w-[300px] overflow-x-auto">
           <li
             className="bg-[#F3F4F6] text-[#707481] hover:border-black border-2 flex px-2 py-[6px] justify-center items-center gap-x-1 transition-all duration-300 rounded-lg text-xs font-semibold cursor-pointer"
             onClick={() => handleComponents("Explore")}
