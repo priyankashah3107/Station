@@ -1,4 +1,5 @@
 import Explore from "@/components/Explore";
+import Footer from "@/components/Footer";
 import HomePage from "@/components/HomePage";
 import Navbar from "@/components/Navbar";
 import Podcast from "@/components/Podcast";
@@ -10,6 +11,7 @@ const explore = () => {
       <Navbar />
       <HomePage />
       <Explore />
+      <Footer />
     </>
   );
 };

@@ -73,8 +73,14 @@ const HomePage = () => {
               </div> */}
               <div className="flex flex-row ">
                 {images.map((val, index) => (
-                  <div className="flex flex-row" key={index}>
-                    <Image src={val.image} alt="user1" width={40} height={40} />
+                  <div className="flex flex-row -ml-3" key={index}>
+                    <Image
+                      src={val.image}
+                      alt="user1"
+                      width={40}
+                      height={40}
+                      className="size-10"
+                    />
                   </div>
                 ))}
               </div>
