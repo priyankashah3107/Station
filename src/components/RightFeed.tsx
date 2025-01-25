@@ -8,6 +8,10 @@ import GuestSuggestion from "./GuestSuggestion";
 import NoDumbQuestion from "./NoDumbQuestion";
 import FanArt from "./FanArt";
 import Feed from "./Feed";
+import Explore from "./Explore";
+import ExploreLeftPage from "./ExploreLeftPage";
+import Deals from "./Deals";
+import Merch from "./Merch";
 
 const icons = [
   {
@@ -40,6 +44,25 @@ const fanfeed = [
   {
     id: 3,
     name: "Top 🏆",
+  },
+];
+
+const videos = [
+  {
+    id: 1,
+    vid: "/video/v2.jpg",
+  },
+  {
+    id: 2,
+    vid: "/video/v3.jpg",
+  },
+  {
+    id: 3,
+    vid: "/video/v4.jpg",
+  },
+  {
+    id: 4,
+    vid: "/video/v5.jpg",
   },
 ];
 
@@ -237,14 +260,6 @@ function FanFeed() {
   );
 }
 
-function LeftFeed() {
-  return (
-    <>
-      <section>LeftFeed</section>
-    </>
-  );
-}
-
 function RequestCollection() {
   const [selectedComponent, setSelectedComponent] =
     useState<JSX.Element | null>(null); // how can i fix this JSX by using JSX from react..?
@@ -322,6 +337,143 @@ function RequestCollection() {
         {selectedComponent}
         {/* dynamically render of the selected comp */}
       </div>
+    </>
+  );
+}
+
+function LeftFeed() {
+  return (
+    <>
+      <section>
+        <div className="bg-black flex flex-col mt-3 min-w-full lg:min-w-[380px] overflow-hidden rounded-[20px] text-white sm:ml-6">
+          <div className="flex flex-col gap-5 bg-[#000000] p-3 relative w-full transition-all duration-300">
+            <div className="flex flex-row cursor-pointer">
+              {/* Main Video Section */}
+              <div className="relative">
+                <Image
+                  src={"/video/v1.png"}
+                  alt="Main video thumbnail"
+                  width={300}
+                  height={290}
+                  className="w-[300px] h-[290px] rounded-2xl"
+                />
+                {/* Play Button */}
+                <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center p-4 bg-gradient-to-r from-[#FE0307] to-[#D90AB9] text-white rounded-full z-20">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    className="w-6 h-6 cursor-pointer"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z"
+                      clipRule="evenodd"
+                    ></path>
+                  </svg>
+                </span>
+                {/* Video Title */}
+                <p className="text-center font-medium tracking-tight truncate leading-[30px] w-full mt-2">
+                  Greatest Hit of 2024
+                </p>
+              </div>
+
+              {/* Additional Videos Section */}
+              <div className="flex flex-col gap-4 ml-4 mt-4">
+                {videos.map((val) => (
+                  <div key={val.id} className="relative">
+                    <Image
+                      src={val.vid}
+                      alt={`Thumbnail for video ${val.id}`}
+                      width={64}
+                      height={64}
+                      className="w-16 h-16 rounded-full"
+                    />
+                    {/* Play Button Icon */}
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="w-6 h-6 text-white absolute top-1/2 right-2 transform -translate-y-1/2 cursor-pointer"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z"
+                        clipRule="evenodd"
+                      ></path>
+                    </svg>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Carousel Section */}
+        <div className="mt-4">
+          <LeftFeedExplore />
+        </div>
+      </section>
+    </>
+  );
+}
+
+function LeftFeedExplore() {
+  const [selectedComponent, setSelectedComponent] =
+    useState<JSX.Element | null>(null);
+
+  const handleComponents = (component: string) => {
+    switch (component) {
+      case "Explore":
+        setSelectedComponent(<ExploreLeftPage />);
+        break;
+      case "Deals":
+        setSelectedComponent(<Deals />);
+        break;
+      case "Merch":
+        setSelectedComponent(<Merch />);
+        break;
+      default:
+        setSelectedComponent(null);
+    }
+  };
+
+  return (
+    <>
+      <section>
+        {/* Buttons */}
+        <ul className="flex flex-wrap gap-1 sm:mt-6 sm:ml-8">
+          <li
+            className="bg-[#F3F4F6] text-[#707481] hover:border-black border-2 flex px-2 py-[6px] justify-center items-center gap-x-1 transition-all duration-300 rounded-lg text-xs font-semibold cursor-pointer"
+            onClick={() => handleComponents("Explore")}
+          >
+            Explore
+          </li>
+          <li
+            className="bg-[#F3F4F6] text-[#707481] hover:border-black border-2 flex px-2 py-[6px] justify-center items-center gap-x-1 transition-all duration-300 rounded-lg text-xs font-semibold cursor-pointer"
+            onClick={() => handleComponents("Deals")}
+          >
+            Deals
+          </li>
+          <li
+            className="bg-[#F3F4F6] text-[#707481] hover:border-black border-2 flex px-2 py-[6px] justify-center items-center gap-x-1 transition-all duration-300 rounded-lg text-xs font-semibold cursor-pointer"
+            onClick={() => handleComponents("Merch")}
+          >
+            Merch
+          </li>
+        </ul>
+
+        {/* Render selected component */}
+        <div className="mt-4">
+          {selectedComponent ? (
+            selectedComponent
+          ) : (
+            <p className="text-gray-500">
+              Please select a component to display.
+            </p>
+          )}
+        </div>
+      </section>
     </>
   );
 }
