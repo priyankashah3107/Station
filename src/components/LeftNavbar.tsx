@@ -51,18 +51,22 @@ const LeftNavbar = () => {
       <div className="lg:hidden fixed top-4 left-4 z-50">
         <button
           onClick={toggleMobileMenu}
-          className="p-2 text-gray-600 hover:text-black focus:outline-none"
+          className="p-2 text-gray-900 hover:text-black focus:outline-none"
         >
-          {isMobileOpen ? <X size={24} /> : <Menu size={24} />}
+          {isMobileOpen ? (
+            <X size={24} />
+          ) : (
+            <Menu size={24} className="text-black" />
+          )}
         </button>
       </div>
 
       {/* Sidebar */}
       <nav
-        className={`fixed top-0 left-0 h-screen z-40 bg-[#f1f1f1] border-r border-gray-200 transform transition-transform ${
+        className={`fixed top-0 left-0 h-screen z-40 bg-[#f1f1f1] border-r border-gray-200 transform transition-transform overflow-x-auto ${
           isMobileOpen ? "translate-x-0" : "-translate-x-full"
         } lg:translate-x-0 lg:w-[64px] ${
-          isExpanded ? "lg:w-[180px]" : "lg:w-[64px]"
+          isExpanded ? "lg:w-[200px]" : "lg:w-[64px]"
         }`}
       >
         <div className="flex flex-col h-full justify-between">
@@ -156,9 +160,9 @@ const LeftNavbar = () => {
                       <path
                         d="M9.49999 3L6.49999 21M17.5 3L14.5 21M20.5 8H3.5M19.5 16H2.5"
                         stroke="black"
-                        stroke-width="1.5"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeWidth="1.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                       ></path>
                     </svg>
                     <li className="font-medium">{val.name}</li>
