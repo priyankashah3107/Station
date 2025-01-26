@@ -85,8 +85,8 @@ function Banner() {
   };
   return (
     <>
-      <section className="flex min-h-screen flex-col w-full max-w-[1048px] mx-auto">
-        <div className="flex min-h-screen flex-col gap-y-6 p-3 md:p-6 lg:px-9 mx-auto w-full">
+      <section className="flex min-h-screen flex-col w-full  mx-auto bg-white dark:bg-[#f1f1f1] text-black dark:text-black">
+        <div className="flex min-h-screen max-w-[1048px] flex-col gap-y-6 p-3 md:p-6 lg:px-9 mx-auto w-full">
           <div className="flex flex-col">
             <Image
               src={"/hoading.png"}

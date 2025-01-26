@@ -21,7 +21,7 @@ const footer = [
 const Footer = () => {
   return (
     <>
-      <footer className="bg-[#F1F1F1] flex flex-col sm:flex-row justify-between p-6 sm:p-14 items-center text-black mt-2 sm:mt-20">
+      <footer className="bg-[#F1F1F1] dark:bg-[#f1f1f1] text-black dark:text-black flex flex-col sm:flex-row justify-between p-6 sm:p-14 items-center ">
         <div className="flex flex-col gap-2">
           <div className="flex items-center space-x-2 ">
             <svg

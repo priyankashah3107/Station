@@ -13,7 +13,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white text-black ">
+    <nav className="bg-white dark:bg-white text-black dark:text-white ">
       <div className="flex items-center justify-between px-4 py-4  mx-auto">
         {/* Logo and Hamburger Menu */}
         <div className="flex items-center space-x-4 cursor-pointer">

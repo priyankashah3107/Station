@@ -113,7 +113,7 @@ const podcast = [
 
 const Podcast = () => {
   return (
-    <section className="flex flex-col w-full bg-[#F3F4F6] mx-auto items-center justify-center py-12 gap-8">
+    <section className="flex flex-col w-full bg-[#F3F4F6] dark:bg-[#F3F4F6] text-black dark:text-black  mx-auto items-center justify-center py-12 gap-8">
       <div className="flex flex-col gap-5 md:gap-9 mx-auto relative w-screen max-w-[1400px]">
         <h2 className="text-text-primary text-[22px] md:text-[28px] tracking-tight font-bold w-full max-w-6xl mx-auto text-center lg:px-8">
           Explore Podcast Communities 📻

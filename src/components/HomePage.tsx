@@ -38,12 +38,12 @@ const images = [
 const HomePage = () => {
   return (
     <>
-      <div className="flex justify-center mt-10 sm:mt-2 mb-6 lg:mb-10">
+      <div className="flex justify-center  bg-white dark:bg-white text-black dark:text-black ">
         <div className="flex flex-col  justify-between lg:flex-row lg:gap-32 py-12 lg:pt-10 lg:pb-16 px-4 w-full h-full max-w-7xl items-center lg:ml-28 ">
           <div className="flex flex-col gap-6 md:gap-9 px-4 my-auto w-full ">
             {/* 1 */}
 
-            <div className="flex flex-col gap-6 items-center justify-center lg:items-start lg:justify-start">
+            <div className="flex flex-col gap-6 items-center justify-center lg:items-start lg:justify-start ">
               <h1 className="text-text-primary  text-[28px] md:text-[40px] leading-[120%] font-bold tracking-tighter text-center lg:text-left text-nowrap ">
                 Join your Podcast Tribe
               </h1>

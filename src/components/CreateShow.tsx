@@ -121,12 +121,12 @@ function ClaimYourStation() {
   const [email, setEmail] = useState("");
   return (
     <>
-      <section className="flex justify-center ">
-        <div className=" grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 w-full overflow-hidden min-h-screen bg-secondary-lite =">
+      <section className="flex justify-center  ">
+        <div className=" grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 w-full overflow-hidden min-h-screen bg-secondary-lite bg-white dark:bg-white text-black dark:text-black">
           <div className="flex flex-col gap-6 md:gap-12 justify-center items-center px-4 md:px-24 pt-12 md:py-20">
             <form className="flex flex-col gap-6 md:gap-12 max-w-md">
               <div className="flex flex-col gap-2 md:gap-4">
-                <h2 className="text-[28px] md:text-[40px] md:leading-[44px] font-bold text-black tracking-tighter">
+                <h2 className="text-[28px] md:text-[40px] md:leading-[44px] font-bold  tracking-tighter">
                   Claim your Station
                 </h2>
                 <p className="md:text-[20px] text-text-primary">
@@ -348,7 +348,7 @@ function ShowCase() {
 function Price() {
   return (
     <>
-      <section className="flex flex-col px-4 lg:p-24 py-16 gap-9 w-full bg-secondary-lite max-w-screen-2xl mx-auto">
+      <section className="flex flex-col px-4 lg:p-24 py-16 gap-9 w-full bg-secondary-lite max-w-screen-2xl mx-auto bg-[#F1F1F1] dark:bg-[#f1f1f1] text-black dark:text-black">
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-2">
             <h1 className="text-[28px] md:text-[40px] md:leading-[36px] font-semibold text-black tracking-tighter">
@@ -392,9 +392,9 @@ function GetInFront() {
   return (
     <>
       <section>
-        <div className="flex flex-col md:flex-row gap-12 lg:gap-24 items-center justify-around mt-32 md:mt-32 mb-6 ">
-          <div className="flex flex-col gap-3 lg:gap-6 items-center justify-center text-center">
-            <h1 className="text-[28px] md:text-[40px] leading-[120%] lg:leading-[40px] font-bold text-black tracking-tight lg:max-w-sm">
+        <div className="flex flex-col md:flex-row gap-12 lg:gap-24 items-center justify-around   bg-white dark:bg-[#f1f1f1] text-black dark:text-black">
+          <div className="flex flex-col gap-3 lg:gap-6 items-center justify-center text-center ">
+            <h1 className="text-[28px] md:text-[40px] leading-[120%] lg:leading-[40px] font-bold text-black tracking-tight lg:max-w-sm ">
               Ignite fandom and discussions.
             </h1>
             <p className="text-black max-w-sm font-medium text-[20px] leading-[20px]">
@@ -445,9 +445,9 @@ function Testinomails() {
         <div className="hidden md:flex flex-col md:flex-row md:gap-16 gap-6 items-center border-l border-white/20 pl-16">
           <div className="flex flex-col gap-4 w-full max-w-[650px]">
             <h2 className="text-[20px] font-semibold text-white text-center md:text-left leading-[120%]">
-              The &#34;Discord for Podcasts&#34; bridges the gap between creators and
-              listeners, fostering deeper engagement and unlocking new
-              monetization opportunities.
+              The &#34;Discord for Podcasts&#34; bridges the gap between
+              creators and listeners, fostering deeper engagement and unlocking
+              new monetization opportunities.
             </h2>
             <p className="md:text-lg text-white text-center md:text-left leading-[100%] font-mediumx">
               Yahoo Finance
@@ -466,7 +466,10 @@ function CreateShowForm() {
   };
   return (
     <>
-      <form onSubmit={onFormSubmit} className="bg-[#F3F4F6] py-8">
+      <form
+        onSubmit={onFormSubmit}
+        className="bg-[#F3F4F6] dark:bg-[#f3f3f6] text-black dark:text-black py-8"
+      >
         <div className="flex justify-center mt-20 px-3 py-2 ">
           <div className=" rounded-lg  p-4 w-full max-w-lg relative">
             <div className="flex flex-col gap-2">
