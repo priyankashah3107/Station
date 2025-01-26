@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import React, { useState } from "react";
-
+import { EmojiClickData } from "emoji-picker-react";
 interface CardProps {
   title: string;
   para: string;
@@ -19,7 +19,7 @@ const Card: React.FC<CardProps> = ({ title, para, time, svgimg, image }) => {
   const [showEmojiPicker, setShowEmojiPicker] = useState(false);
   const [inputValue, setInputValue] = useState("");
 
-  const handleEmojiClick = (emojiObject: any) => {
+  const handleEmojiClick = (emojiObject: EmojiClickData) => {
     setInputValue((prevValue) => prevValue + emojiObject.emoji);
   };
   const toggleEmojiPicker = () => {

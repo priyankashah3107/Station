@@ -1,11 +1,11 @@
 "use client";
 
 import React, { useState } from "react";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import Image from "next/image";
 
 // Dynamically import emoji picker to avoid SSR issues
-const EmojiPicker = dynamic(() => import("emoji-picker-react"), { ssr: false });
+// const EmojiPicker = dynamic(() => import("emoji-picker-react"), { ssr: false });
 
 // interface TrendingProps {
 //   name: string;

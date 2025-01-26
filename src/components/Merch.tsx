@@ -84,41 +84,30 @@ const explorecard = [
 
 const Merch = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerPage = {
-    mobile: 1.2,
-    desktop: 4,
-  };
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      Math.min(prevIndex + 1, explorecard.length - itemsPerPage.mobile)
+      prevIndex === explorecard.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 0));
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? explorecard.length - 1 : prevIndex - 1
+    );
   };
 
   return (
     <div className="w-full">
       {/* Mobile Carousel View */}
       <div className="block md:hidden relative">
-        <div className="flex overflow-hidden">
+        <div className="overflow-hidden">
           <div
-            className="flex transition-transform duration-300"
-            style={{
-              transform: `translateX(-${
-                currentIndex * (100 / itemsPerPage.mobile)
-              }%)`,
-              width: `${explorecard.length * (100 / itemsPerPage.mobile)}%`,
-            }}
+            className="flex transition-transform duration-300 ease-in-out"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
           >
             {explorecard.map((val) => (
-              <div
-                key={val.id}
-                className="py-4 w-full"
-                style={{ width: `${100 / itemsPerPage.mobile}%` }}
-              >
+              <div key={val.id} className="w-full flex-shrink-0">
                 <LeftCardFeedInfo
                   image={val.image}
                   title={val.title}
@@ -133,22 +122,20 @@ const Merch = () => {
         {/* Custom Navigation */}
         <button
           onClick={handlePrev}
-          disabled={currentIndex === 0}
-          className="absolute top-1/2 left-2 z-10 bg-white/50 rounded-full p-1 disabled:opacity-50"
+          className="absolute top-1/2 left-2 z-10 bg-white/50 rounded-full p-1 transform -translate-y-1/2 "
         >
-          <ChevronLeft className="text-black" />
+          <ChevronLeft className="text-white rounded-md bg-black" />
         </button>
         <button
           onClick={handleNext}
-          disabled={currentIndex >= explorecard.length - itemsPerPage.mobile}
-          className="absolute top-1/2 right-2 z-10 bg-white/50 rounded-full p-1 disabled:opacity-50"
+          className="absolute top-1/2 right-2 z-10 bg-white/50 rounded-full p-1 transform -translate-y-1/2"
         >
-          <ChevronRight className="text-black" />
+          <ChevronRight className="text-white rounded-md bg-black" />
         </button>
       </div>
 
       {/* Desktop Grid View */}
-      <div className="hidden sm:flex flex-row gap-4">
+      <div className="hidden md:flex flex-row gap-4 p-4">
         {explorecard.map((val) => (
           <LeftCardFeedInfo
             key={val.id}

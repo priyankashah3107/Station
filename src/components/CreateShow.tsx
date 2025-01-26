@@ -152,7 +152,7 @@ function ClaimYourStation() {
                     className="inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-200 text-sm font-medium disabled:opacity-50 focus-visible:outline-none bg-gradient-to-r from-[#FE0307] to-[#D90AB9] text-white opacity-100 hover:opacity-90 h-10 px-7 py-2 w-full"
                     type="submit"
                   >
-                    Start your Station, it's free
+                    Start your Station, it&#39;s free
                   </button>
                 </div>
               </div>
@@ -445,7 +445,7 @@ function Testinomails() {
         <div className="hidden md:flex flex-col md:flex-row md:gap-16 gap-6 items-center border-l border-white/20 pl-16">
           <div className="flex flex-col gap-4 w-full max-w-[650px]">
             <h2 className="text-[20px] font-semibold text-white text-center md:text-left leading-[120%]">
-              The "Discord for Podcasts" bridges the gap between creators and
+              The &#34;Discord for Podcasts&#34; bridges the gap between creators and
               listeners, fostering deeper engagement and unlocking new
               monetization opportunities.
             </h2>
