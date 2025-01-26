@@ -63,10 +63,12 @@ const LeftNavbar = () => {
 
       {/* Sidebar */}
       <nav
-        className={`fixed top-0 left-0 h-screen z-40 bg-[#f1f1f1] border-r border-gray-200 transform transition-transform  ${
-          isMobileOpen ? "translate-x-0" : "-translate-x-full"
+        className={`fixed top-0 left-0 h-screen  bg-[#f1f1f1] border-r border-gray-200 transform transition-transform ${
+          isMobileOpen
+            ? "translate-x-0 lg:w-[200px] "
+            : "translate-x-full  lg:w-[64px]"
         } lg:translate-x-0 lg:w-[64px] ${
-          isExpanded ? "lg:w-[190px]" : "lg:w-[64px]"
+          isExpanded ? "lg:w-[200px]" : "lg:w-[64px]"
         }`}
       >
         <div className="flex flex-col h-full justify-between">
@@ -140,7 +142,7 @@ const LeftNavbar = () => {
             </div>
           </div>
 
-          {isExpanded ? (
+          {isExpanded && (
             <div className="flex flex-col gap-4 py-2 px-4">
               <h2 className="text-xs font-semibold uppercase text-[#707481]">
                 COMMUNITY
@@ -148,7 +150,7 @@ const LeftNavbar = () => {
               {community.map((val) => (
                 <ul
                   key={val.id}
-                  className="text-[#0E1323] truncate transition-opacity duration-300 w-full text-wrap cursor-pointer hover:bg-[#f1f1f1]"
+                  className="text-[#0E1323] transition-opacity duration-300 w-full cursor-pointer hover:bg-[#f1f1f1]"
                 >
                   <div className="flex flex-row gap-2 hover:bg-[#d1d1d1] p-0.5 rounded-md">
                     <svg
@@ -165,13 +167,13 @@ const LeftNavbar = () => {
                         strokeLinejoin="round"
                       ></path>
                     </svg>
-                    <li className="font-medium">{val.name}</li>
+                    <li className="font-medium whitespace-normal break-words">
+                      {val.name}
+                    </li>
                   </div>
                 </ul>
               ))}
             </div>
-          ) : (
-            ""
           )}
 
           {/* Bottom Section */}
