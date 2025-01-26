@@ -251,7 +251,7 @@ const Trending = () => {
                 </div>
 
                 {/* Conditionally render Emoji Picker */}
-                {showEmojiPicker && (
+                {/* {showEmojiPicker && (
                   <div className="absolute z-50 mt-2">
                     <EmojiPicker
                       onEmojiClick={(emoji) => {
@@ -260,7 +260,7 @@ const Trending = () => {
                       }}
                     />
                   </div>
-                )}
+                )} */}
               </div>
             </div>
           </div>

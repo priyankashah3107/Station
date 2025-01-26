@@ -73,7 +73,7 @@ const Form: React.FC<Props> = ({ onClose }) => {
             </div>
 
             <div className="flex flex-col gap-y-4">
-              <label className="mb-4 text-sm font-medium peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+              <label className="mt-4 text-sm font-semibold peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
                 Email address
               </label>
               <input
@@ -128,8 +128,8 @@ const Form: React.FC<Props> = ({ onClose }) => {
                 <span>Sign in with Google</span>
               </button>
               <p className="text-xs">
-                By clicking &#39;Enter Community&#39; or &#39;Continuing with Google&#39; I
-                agree to the Drop Station Inc.{" "}
+                By clicking &#39;Enter Community&#39; or &#39;Continuing with
+                Google&#39; I agree to the Drop Station Inc.{" "}
                 <span className="font-semibold">Term of Services</span> and have
                 read the <span className="font-semibold">Privacy Policy.</span>{" "}
                 I also agree that Station may{" "}
