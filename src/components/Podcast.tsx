@@ -1,4 +1,4 @@
-import { ArrowDown, ArrowLeftCircle, ArrowRightCircle } from "lucide-react";
+import { ArrowRightCircle } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -114,7 +114,7 @@ const podcast = [
 const Podcast = () => {
   return (
     <section className="flex flex-col w-full bg-[#F3F4F6] mx-auto items-center justify-center py-12 gap-8">
-      <div className="flex flex-col gap-5 md:gap-9 mx-auto relative w-full max-w-[1400px]">
+      <div className="flex flex-col gap-5 md:gap-9 mx-auto relative w-screen max-w-[1400px]">
         <h2 className="text-text-primary text-[22px] md:text-[28px] tracking-tight font-bold w-full max-w-6xl mx-auto text-center lg:px-8">
           Explore Podcast Communities 📻
         </h2>
@@ -124,7 +124,7 @@ const Podcast = () => {
             <Link
               href={"/chiefsnewsdaily"}
               key={val.id}
-              className="lg:min-w-[264px] lg:max-w-[264px] h-full w-full relative rounded-[10px] border border-tertiary cursor-pointer lg:hover:-translate-y-1 transition-all duration-300 bg-white p-[10px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] flex flex-col gap-3"
+              className="min-w-[264px] max-w-[264px] h-full w-full relative rounded-[10px] border border-tertiary cursor-pointer lg:hover:-translate-y-1 transition-all duration-300 bg-white p-[10px] shadow-[0_4px_4px_0_rgba(0,0,0,0.25)] flex flex-col gap-3"
             >
               <Image
                 src={val.image}

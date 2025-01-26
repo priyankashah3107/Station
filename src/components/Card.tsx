@@ -98,7 +98,7 @@ const Card: React.FC<CardProps> = ({ title, para, time, svgimg, image }) => {
           {showEmojiPicker && (
             <div className="absolute z-50 mt-20">
               <EmojiPicker
-                onEmojiClick={(emoji, event) => {
+                onEmojiClick={(emoji) => {
                   console.log("Selected emoji:", emoji.emoji);
                   setShowEmojiPicker(false); // Close the picker after selection
                 }}

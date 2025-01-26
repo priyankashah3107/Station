@@ -8,10 +8,11 @@ import GuestSuggestion from "./GuestSuggestion";
 import NoDumbQuestion from "./NoDumbQuestion";
 import FanArt from "./FanArt";
 import Feed from "./Feed";
-import Explore from "./Explore";
+// import Explore from "./Explore";
 import ExploreLeftPage from "./ExploreLeftPage";
 import Deals from "./Deals";
 import Merch from "./Merch";
+import Form from "./Form";
 
 const icons = [
   {
@@ -77,6 +78,11 @@ const RightFeed = () => {
 export default RightFeed;
 
 function Banner() {
+  const [showForm, setShowForm] = useState(false);
+
+  const handFormToggle = () => {
+    setShowForm(!showForm);
+  };
   return (
     <>
       <section className="flex min-h-screen flex-col w-full max-w-[1048px] mx-auto">
@@ -144,6 +150,7 @@ function Banner() {
                     color="inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-200 text-sm font-medium disabled:opacity-50 focus-visible:outline-none bg-gradient-to-r from-[#FE0307] to-[#D90AB9] text-white opacity-100 hover:opacity-90 py-2 px-3 shadow"
                     size="px-4 py-2"
                     className="rounded"
+                    onClick={handFormToggle}
                   >
                     Join Wondery+
                   </Button>
@@ -152,6 +159,12 @@ function Banner() {
             </div>
           </div>
 
+          {/* Conditionally render the Form */}
+          {showForm && (
+            <div className="mt-6">
+              <Form onClose={handFormToggle} />
+            </div>
+          )}
           {/* feeds   */}
           <div className="flex flex-col-reverse md:flex-row justify-between">
             <FanFeed />
@@ -344,7 +357,7 @@ function RequestCollection() {
 function LeftFeed() {
   return (
     <>
-      <section className="max-w-[400px] border">
+      <section className="max-w-[400px] border  ">
         <div className="bg-black flex flex-col mt-3 min-w-full lg:min-w-[380px] overflow-hidden rounded-[20px] text-white sm:ml-6">
           <div className="flex flex-col gap-5 bg-[#000000] p-3 relative w-full transition-all duration-300">
             <div className="flex flex-row cursor-pointer">

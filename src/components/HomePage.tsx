@@ -39,7 +39,7 @@ const HomePage = () => {
   return (
     <>
       <div className="flex flex-col  justify-between lg:flex-row lg:gap-32 py-12 lg:pt-10 lg:pb-16 px-4 w-full h-full max-w-7xl items-center lg:ml-28">
-        <div className="flex flex-col gap-6 md:gap-9 px-4 my-auto w-full   ">
+        <div className="flex flex-col gap-6 md:gap-9 px-4 my-auto w-full ">
           {/* 1 */}
 
           <div className="flex flex-col gap-6 items-center justify-center lg:items-start lg:justify-start">
@@ -47,7 +47,7 @@ const HomePage = () => {
               Join your Podcast Tribe
             </h1>
             <p className="text-sm text-text-primary max-w-lg text-center lg:text-left">
-              Station is like a "Discord for Podcasts". A simple hub to discuss
+              Station is like a &#34;Discord for Podcasts&#34;. A simple hub to discuss
               topics, attend events, find promo codes and explore hidden
               content.
             </p>

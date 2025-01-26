@@ -5,17 +5,19 @@ import React, { ReactNode } from "react";
 interface ButtonProps {
   children: ReactNode;
   className?: string;
-  buttonName: string;
+  buttonName?: string;
   color?: string; // Add dynamic color prop
   size?: string; // Add dynamic size prop
+  onClick?: () => void;
 }
 
 const Button = ({
   children,
   className = "",
-  buttonName,
+  // buttonName,
   color,
   size,
+  onClick,
 }: ButtonProps) => {
   // Combine dynamic styles with additional classes
   const dynamicStyles = `${color || "text-white"} ${
@@ -25,6 +27,7 @@ const Button = ({
   return (
     <button
       className={dynamicStyles}
+      onClick={onClick ? onClick : undefined}
       // onClick={() => alert(`Hello from your ${buttonName} app!`)}
     >
       {children}

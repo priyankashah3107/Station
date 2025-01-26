@@ -7,13 +7,13 @@ import Image from "next/image";
 // Dynamically import emoji picker to avoid SSR issues
 const EmojiPicker = dynamic(() => import("emoji-picker-react"), { ssr: false });
 
-interface TrendingProps {
-  name: string;
-  tag: string;
-  para: string;
-  image?: string;
-  time: string;
-}
+// interface TrendingProps {
+//   name: string;
+//   tag: string;
+//   para: string;
+//   image?: string;
+//   time: string;
+// }
 
 const trendingData = [
   {
@@ -254,7 +254,7 @@ const Trending = () => {
                 {showEmojiPicker && (
                   <div className="absolute z-50 mt-2">
                     <EmojiPicker
-                      onEmojiClick={(emoji, event) => {
+                      onEmojiClick={(emoji) => {
                         console.log("Selected emoji:", emoji.emoji);
                         setShowEmojiPicker(false); // Close the picker after selection
                       }}
