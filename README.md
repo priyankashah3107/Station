@@ -5,9 +5,11 @@ This is a full frontend clone of [Station.page](https://station.page/), built us
 👉 **Live Demo**: [StationClone](https://station-gray.vercel.app/)  
 👉 **Original Website**: [Station.page](https://station.page/)
 
-![Demo](https://github.com/user-attachments/assets/53d7f636-56bd-4252-ad7b-373244d70287)
+## Demo![github](https://github.com/user-attachments/assets/53d7f636-56bd-4252-ad7b-373244d70287)
 
----
+ng Started
+
+> > > > > > > 6447e3f894233df32f495a483e2ee15f0bdd88d7
 
 ## 🚀 Getting Started
 
