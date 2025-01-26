@@ -18,11 +18,93 @@ const logos = [
   },
 ];
 
+const images = [
+  {
+    id: 1,
+    image: "/logos/l1.svg",
+  },
+  {
+    id: 2,
+    image: "/logos/l2.svg",
+  },
+  {
+    id: 3,
+    image: "/logos/l3.svg",
+  },
+  {
+    id: 4,
+    image: "/logos/l4.svg",
+  },
+  {
+    id: 5,
+    image: "/logos/l5.svg",
+  },
+  {
+    id: 6,
+    image: "/logos/l6.png",
+  },
+  {
+    id: 7,
+    image: "/logos/l7.svg",
+  },
+  {
+    id: 8,
+    image: "/logos/l8.svg",
+  },
+];
+
+const pricingData = [
+  {
+    title: "Starter",
+    price: "Free",
+    emailLimit: "Up to 200 email signups",
+    features: ["Giveaways & Contests", "Showcase Deals", "Auto-email episodes"],
+  },
+  {
+    title: "Indie",
+    price: "$19 / month",
+    emailLimit: "Up to 500 email signups",
+    features: ["All Starter features +", "Email CSV exports"],
+  },
+  {
+    title: "Influencer",
+    price: "$49 / month",
+    emailLimit: "Up to 1,000 email signups",
+    features: [
+      "All Indie features +",
+      "Multiple channels",
+      "Email Integrations",
+    ],
+  },
+  {
+    title: "Thought Leader",
+    price: "$199 / month",
+    emailLimit: "Up to 5,000 email signups",
+    features: [
+      "All Influencer features +",
+      "Custom URL",
+      "Station's contest terms and conditions",
+    ],
+  },
+  {
+    title: "Large Show",
+    price: "Contact Us",
+    emailLimit: "Over 10,000 email signups",
+    features: [
+      "All Thought Leader features +",
+      "Audience Reports",
+      "Community Manager",
+      "Contest Management",
+    ],
+  },
+];
 const CreateShow = () => {
   return (
     <>
       <Navbar />
       <ClaimYourStation />
+      <ShowCase />
+      <Price />
     </>
   );
 };
@@ -137,8 +219,164 @@ function ClaimYourStation() {
               alt="img"
               width={500}
               height={600}
-              className=" absolute -bottom-6 lg:-bottom-16 object-cover scale-[1.1]  md:w-[775px] md:h-[775px] "
+              className=" absolute -bottom-6 lg:-bottom-16 object-cover scale-[1.1]  lg:w-[775px] lg:h-[775px] "
             />
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+function ShowCase() {
+  return (
+    <>
+      <section className="flex flex-col gap-24 lg:gap-48 px-4 py-16 lg:px-24 lg:py-24 lg:pt-40 bg-black h-full  relative w-full overflow-hidden mt-10">
+        <div className="flex flex-col ">
+          <div className="absolute top-1/2 -translate-y-1/2 -right-44 bg-gradient-to-r from-[#FE0307] to-[#D90AB9] size-[374px] rounded-full opacity-30 z-0"></div>
+          <div className="flex flex-col-reverse md:flex-row gap-12 lg:gap-24 justify-around  text-center w-full z-[1] ">
+            <div className="lg:w-[700px] lg:h-[500px] object-cover">
+              <Image
+                src={"/showcase.png"}
+                alt="showcase"
+                width={500}
+                height={500}
+                className="lg:w-[625px] lg:h-[500px] "
+              />
+            </div>
+            <div className="flex flex-col gap-3 lg:gap-6 items-center justify-center text-center">
+              <h1 className="text-[28px] md:text-[40px] leading-[120%] lg:leading-[40px] font-bold text-white tracking-tight lg:max-w-sm">
+                Showcase your content better than any website builder.
+              </h1>
+              <p className="text-white max-w-sm font-medium text-[20px] leading-[20px]">
+                Grow fans, build community and monetize your audience.
+              </p>
+            </div>
+          </div>
+
+          {/* <div>2</div> */}
+
+          <div className="flex flex-col md:flex-row gap-12 lg:gap-24 items-center justify-around mt-32 md:mt-72 ">
+            <div className="flex flex-col gap-3 lg:gap-6 items-center justify-center text-center">
+              <h1 className="text-[28px] md:text-[40px] leading-[120%] lg:leading-[40px] font-bold text-white tracking-tight lg:max-w-sm">
+                Ignite fandom and discussions.
+              </h1>
+              <p className="text-white max-w-sm font-medium text-[20px] leading-[20px]">
+                Consolidate your offers, discussions, subscriptions and more.
+              </p>
+            </div>
+            <div className="lg:w-[700px] lg:h-[500px] object-cover">
+              <Image
+                src={"/show.png"}
+                alt="show"
+                width={500}
+                height={500}
+                className="lg:w-[625px] lg:h-[500px] "
+              />
+            </div>
+          </div>
+          {/* <div>3</div> */}
+          <div className="flex flex-col  gap-12 lg:gap-24 items-center mt-20  lg:mt-52 ">
+            {/* <div className="absolute bottom-0 -left-44 bg-gradient-to-r from-[#FE0307] to-[#D90AB9]  rounded-full opacity-30 z-0"></div> */}
+            <div className="absolute top-1/2 -left-44 bg-gradient-to-r from-[#FE0307] to-[#D90AB9] size-[374px] rounded-full opacity-30 z-0"></div>
+
+            <div className="flex flex-col gap-3 lg:gap-6 items-center justify-center text-center z-[1]">
+              <h1 className="text-[28px] md:text-[40px] leading-[120%] lg:leading-[40px] font-bold text-white tracking-tight">
+                Set your page up with a <br />
+                <span className="bg-gradient-to-r from-[#FE0307] to-[#D90AB9] text-transparent bg-clip-text">
+                  click of a button.
+                </span>
+              </h1>
+
+              <p className="text-white max-w-sm font-medium text-[20px] leading-[20px]">
+                Station uses AI to search your offers, merch and showcase your
+                content.
+              </p>
+            </div>
+            <div className="w-full h-full aspect-video rounded-2xl max-w-4xl border border-tertiary/20 overflow-hidden cursor-pointer">
+              <iframe
+                src="https://www.youtube.com/embed/EITXQymwILE?si=G87fE3_vlNvsJbT9&amp;enablejsapi=1&amp;origin=https%3A%2F%2Fstation.page"
+                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                className="w-full h-full rounded-2xl pointer-events-none"
+                data-gtm-yt-inspected-173360107_102="true"
+                id="382327537"
+                title="Welcome to Station"
+              ></iframe>
+            </div>
+          </div>
+          {/* <div>4</div> */}
+          <div className="flex justify-center mt-20">
+            <div className="flex flex-col gap-9 items-center justify-center text-center py-8 bg-[#F3F4F6] rounded-2xl z-[1] max-w-2xl w-full px-4">
+              <div className="flex flex-col gap-2 items-center justify-center text-center">
+                <h2 className="text-[24px] md:text-[32px] font-bold text-text-primary tracking-tight md:leading-[36px] leading-[120%]">
+                  Station works with your favorite tools
+                </h2>
+                <p className="md:text-lg text-text-primary">
+                  Send all your sign ups to your current marketing platforms.
+                </p>
+              </div>
+              <div className="grid grid-cols-4 gap-x-2 gap-y-4 max-w-xl">
+                {images.map((val, index) => (
+                  <span
+                    key={index}
+                    className="flex items-center justify-center bg-white px-4 py-2 rounded"
+                  >
+                    <Image
+                      src={val.image}
+                      alt="img"
+                      width={150}
+                      height={28}
+                      className="w-[150px] h-[28px]"
+                    />
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
+
+function Price() {
+  return (
+    <>
+      <section className="flex flex-col px-4 lg:p-24 py-16 gap-9 w-full bg-secondary-lite max-w-screen-2xl mx-auto">
+        <div className="flex flex-col gap-2">
+          <div>
+            <h1 className="text-[28px] md:text-[40px] md:leading-[36px] font-semibold text-black tracking-tighter">
+              Priced for all show sizes
+            </h1>
+            <p className="text-lg text-black">
+              Get started and grow with Station for free.
+            </p>
+          </div>
+          <div className="flex gap-3 w-full overflow-x-auto xl:overflow-x-visible no-scrollbar hover:scrollbar-thin items-start">
+            <div className="flex flex-row gap-4 overflow-x-auto scrollbar-hide pb-4 pt-2">
+              {pricingData.map((plan, index) => (
+                <div
+                  key={index}
+                  className={`border rounded-lg p-6 shadow-md flex flex-col justify-between  border-tertiary px-6 py-9 gap-6 shrink-0 overflow-hidden bg-white hover:bg-black hover:text-white w-60 h-[400px] ${
+                    plan.title === "Indie" ? "bg-white" : "bg-white"
+                  }`}
+                >
+                  <h2 className="text-xl font-bold">{plan.title}</h2>
+                  <p className="text-2xl font-semibold mt-2">{plan.price}</p>
+                  <p className="text-sm text-gray-600 mt-1">
+                    {plan.emailLimit}
+                  </p>
+                  <ul className="mt-4 space-y-2">
+                    {plan.features.map((feature, i) => (
+                      <li key={i} className="flex items-center">
+                        <span className="text-green-500 mr-2">✔</span>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
