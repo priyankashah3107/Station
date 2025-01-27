@@ -16,11 +16,11 @@ const Navbar = () => {
     <nav className="bg-white dark:bg-white text-black dark:text-white ">
       <div className="flex items-center justify-between px-4 py-4  mx-auto">
         {/* Logo and Hamburger Menu */}
-        <div className="flex items-center space-x-4 cursor-pointer">
+        <div className="flex items-center space-x-4 cursor-pointer ">
           {/* Hamburger Menu (Mobile View) */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-2xl focus:outline-none"
+            className="md:hidden text-2xl focus:outline-none  "
             aria-label="Toggle Menu"
           >
             {isMenuOpen ? (
@@ -30,7 +30,7 @@ const Navbar = () => {
                 viewBox="0 0 24 24"
                 strokeWidth={2}
                 stroke="currentColor"
-                className="w-6 h-6"
+                className="w-6 h-6 absolute right-52 z-50 ml-auto"
               >
                 <path
                   strokeLinecap="round"
@@ -45,7 +45,7 @@ const Navbar = () => {
                 viewBox="0 0 24 24"
                 strokeWidth={2}
                 stroke="currentColor"
-                className="w-6 h-6"
+                className="w-6 h-6 "
               >
                 <path
                   strokeLinecap="round"
@@ -109,7 +109,7 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Action Button */}
-        <div className="md:hidden">
+        <Link href={"/create-show"} className="md:hidden">
           <Button
             buttonName="Claim your station"
             color="inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-200 text-sm font-medium disabled:opacity-50 focus-visible:outline-none bg-gradient-to-r from-[#FE0307] to-[#D90AB9] text-white opacity-100 hover:opacity-90 py-2 px-4 shadow"
@@ -118,12 +118,12 @@ const Navbar = () => {
           >
             Claim your station
           </Button>
-        </div>
+        </Link>
       </div>
 
       {/* Mobile Dropdown Menu */}
       {isMenuOpen && (
-        <div className="md:hidden  w-[200px] h-screen  text-black py-6 px-4 space-y-4 rounded-lg shadow-lg">
+        <div className="md:hidden fixed top-0  w-[60%] z-20 bg-white h-full text-black py-6 px-4 space-y-4 rounded-lg shadow-lg">
           {navmobile.map((val, index) => (
             <ul
               className="block w-full text-sm text-left px-4 py-2 hover:bg-gray-50 rounded"

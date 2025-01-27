@@ -104,7 +104,7 @@ function Banner() {
                     alt="img"
                     width={100}
                     height={100}
-                    className="size-[93px] sm:size-[111px] rounded-full"
+                    className="size-[93px] sm:size-[111px] rounded-full  border-4 border-white "
                   />
                 </div>
 
@@ -139,7 +139,7 @@ function Banner() {
                       alt="icon"
                       width={50}
                       height={50}
-                      className="flex flex-row size-8 hover:bg-[#dbdbdb] p-1 rounded-lg"
+                      className="flex flex-row size-6 cursor-pointer hover:bg-[#dbdbdb] p-1 rounded-lg"
                     />
                   ))}
                 </div>
@@ -147,7 +147,7 @@ function Banner() {
                 <div className="mt-6 sm:mt-4">
                   <Button
                     buttonName="Join Wondery+"
-                    color="inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-200 text-sm font-medium disabled:opacity-50 focus-visible:outline-none bg-gradient-to-r from-[#FE0307] to-[#D90AB9] text-white opacity-100 hover:opacity-90 py-2 px-3 shadow"
+                    color="inline-flex items-center justify-center whitespace-nowrap rounded-md transition-all duration-200 text-sm font-medium disabled:opacity-50 focus-visible:outline-none bg-gradient-to-r from-[#FE0307] to-[#D90AB9] text-white opacity-100 hover:opacity-90 py-2 px-3 shadow font-semibold"
                     size="px-4 py-2"
                     className="rounded"
                     onClick={handFormToggle}
