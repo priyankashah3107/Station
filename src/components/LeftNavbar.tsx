@@ -250,15 +250,18 @@ const LeftNavbar = () => {
   return (
     <>
       {/* Mobile Hamburger */}
-      <div className="lg:hidden fixed top-4 left-4 z-50">
+      <div className="lg:hidden fixed top-4 left-4 z-50 justify-between items-center">
         <button
           onClick={toggleMobileMenu}
-          className="p-2 text-gray-900 hover:text-black focus:outline-none"
+          className="p-2 text-gray-900 hover:text-black focus:outline-none items-center"
         >
           {isMobileOpen ? (
-            <X size={24} />
+            <X size={24} className="text-black absolute left-32" />
           ) : (
-            <Menu size={24} className="text-black" />
+            <Menu
+              size={30}
+              className="text-white bg-[#212121]/60 rounded-full p-1"
+            />
           )}
         </button>
       </div>

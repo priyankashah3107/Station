@@ -357,7 +357,7 @@ function RequestCollection() {
 function LeftFeed() {
   return (
     <>
-      <section className="max-w-[400px] border  ">
+      <section className="max-w-[400px]   ">
         <div className="bg-black flex flex-col mt-3 min-w-full lg:min-w-[380px] overflow-hidden rounded-[20px] text-white sm:ml-6">
           <div className="flex flex-col gap-5 bg-[#000000] p-3 relative w-full transition-all duration-300">
             <div className="flex flex-row cursor-pointer">
