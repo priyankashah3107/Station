@@ -43,7 +43,6 @@ const ExploreLeftPage = () => {
       prevIndex === explorecard.length - 1 ? 0 : prevIndex + 1
     );
   };
-
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? explorecard.length - 1 : prevIndex - 1

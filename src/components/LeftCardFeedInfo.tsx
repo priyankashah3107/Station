@@ -15,7 +15,7 @@ const LeftCardFeedInfo: React.FC<LeftCardProps> = ({
 }) => {
   return (
     <>
-      <div className="min-w-[300px] max-w-[200px] min-h-[290px] max-h-[290px] h-auto relative rounded-[10px] border border-[#f1f1f1] cursor-pointer lg:hover:-translate-y-1 transition-all duration-300 bg-white shadow  ">
+      <div className="sm:[200px] w-[300px] w-200 sm:[200px] min-h-[290px] max-h-[290px] h-auto relative rounded-[10px] border border-[#f1f1f1] cursor-pointer lg:hover:-translate-y-1 transition-all duration-300 bg-white shadow   ">
         <div className="flex items-center justify-center px-[10px] pt-[10px]   ">
           {image && (
             <Image

@@ -122,7 +122,7 @@ function Banner() {
                         alt="icon"
                         width={40}
                         height={40}
-                        className="flex flex-row size-7 hover:bg-[#dbdbdb] p-1 rounded-lg"
+                        className="flex flex-row size-7 hover:bg-[#dbdbdb] p-1 rounded-lg cursor-pointer"
                       />
                     ))}
                   </div>
@@ -306,7 +306,7 @@ function RequestCollection() {
   return (
     <>
       <div className="">
-        <ul className="flex flex-wrap gap-1 mb-4">
+        <ul className="flex flex-wrap gap-1 mb-4 cursor-pointer">
           <li
             className="bg-[#F3F4F6] text-[#707481] hover:border-black border-2 flex px-2 py-[6px] justify-center items-center gap-x-1 transition-all duration-300 rounded-lg text-xs font-semibold"
             onClick={() => handleComponents("Feed")}
